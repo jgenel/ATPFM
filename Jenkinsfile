@@ -17,6 +17,7 @@ pipeline {
             steps {
                 dir('automation-testing-repo') { 
                     bat 'mvn -Dtest=RegisterTest test'
+                }
             }
         }
     }
