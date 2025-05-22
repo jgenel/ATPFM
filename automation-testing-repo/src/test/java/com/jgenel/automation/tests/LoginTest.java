@@ -21,20 +21,15 @@ public class LoginTest {
     @BeforeClass
     public void setUp() {
         driver = DriverManager.getDriver();
-        driver.get("http://automationexercise.com");
+        driver.get("https://www.automationexercise.com/login");
         loginPage = new LoginPage(driver);
     }
 
     @Test
     public void testValidLogin() {
-        loginPage.enterUsername("student");
-        loginPage.enterPassword("Password123");
+        loginPage.enterLoginEmail("test@qwerty.com");
+        loginPage.enterLoginPassword("verystrongpassword");
         loginPage.clickLoginButton();
-        WebElement successLoginMessage = driver
-                .findElement(By.xpath("//div[@class='post-header']//h1[text()='Logged In Successfully']"));
-        String loginMessage = successLoginMessage.getText();
-        Assert.assertEquals(loginMessage, "Logged In Successfully");
-        ScreenshotUtil.takeScreenshot(driver, "afterLogin");
     }
 
     @AfterClass

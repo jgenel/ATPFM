@@ -1,0 +1,7 @@
+com\jgenel\automation\enums\Months.class
+com\jgenel\automation\utils\DriverManager.class
+com\jgenel\automation\enums\Gender.class
+com\jgenel\automation\pages\RegisterPage.class
+com\jgenel\automation\utils\ScreenshotUtil.class
+com\jgenel\automation\pages\LoginPage.class
+com\jgenel\automation\enums\Country.class
