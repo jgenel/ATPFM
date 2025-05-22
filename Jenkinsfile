@@ -15,7 +15,8 @@ pipeline {
 
         stage('Build and Test') {
             steps {
-                bat 'mvn -Dtest=RegisterTest test'
+                dir('automation-testing-repo') { 
+                    bat 'mvn -Dtest=RegisterTest test'
             }
         }
     }
